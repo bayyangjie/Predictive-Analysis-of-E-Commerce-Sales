@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/45159366/114321716-048b1c00-9ad1-11eb-828d-a5a5f2a3c726.png" width="80%"/>
+![aws logo](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/amazon.png)
 
 # Table of Contents
 1. Introduction
