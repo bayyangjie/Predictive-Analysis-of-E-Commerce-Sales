@@ -2,7 +2,7 @@
 
 # Table of Contents
 1. [Introduction](#introduction)
-2. [About the dataset](#about-the-dataset)
+2. [About the data](#about-the-dataset)
 3. [Visualisations](#visualisations)
 4. [Modelling and Evaluation](#modelling-and-evaluation)
     * [Predictive Modelling](#predictive-modelling)
@@ -11,11 +11,11 @@
         * [Predictive Model #1 - KNN](#predictive-model-1---knn)
         * [Predictive Model #2 - Decision Tree with Gradient Boosting](#predictive-model-2---decision-tree-with-gradient-boosting)
         * [Predictive Model #3 - Random Forest](#predictive-model-3---random-forest)
-    * [Summary of findings](#summary-of-findings)
-    * [Evaluation of predictive models](#evaluation-of-predictive-models)
+    * [Summary of Findings](#summary-of-findings)
+    * [Evaluation of Predictive Models](#evaluation-of-predictive-models)
 5. [Recommender System](#recommender-system)
-    * [User item matrix](user-item-matrix)
-    * [NMF model](nmf-model)
+    * [User Item Matrix](#user-item-matrix)
+    * [NMF Model](#nmf-model)
     * [Simulation](#simulation)
 6. [Conclusion](#conclusion)
 7. [Improvements](#improvements)
@@ -23,7 +23,7 @@
 # Introduction
 This research looks into the fast-changing landscape of online shopping, focusing on Amazon to identify and analyze new consumer behaviors. The key goals are to enhance Amazon's marketing strategies and boost user satisfaction by using data analytics and machine learning techniques. The findings highlight crucial behavioral trends that significantly improve customer satisfaction and engagement, particularly through methods like K-Nearest Neighbors and Decision Tree with Gradient Boosting. These insights led to the development of a sophisticated recommendation system that effectively spots opportunities for cross-selling and up-selling. The methods and results discussed have important implications for integrating them into Amazon's operations, aiming to improve user experiences and strengthen the company's market position by better understanding and fulfilling customer needs.
 
-# About the dataset
+# About the data
 This research uses a dataset from Kaggle that includes the interactions of 602 customers on Amazon, covering 23 different variables. These interactions show how often customers browse and buy, their satisfaction levels, and how they respond to recommendations. This information helps to understand customer engagement better. The dataset is detailed enough to analyze user behaviors closely, which supports the predictive insights aimed for in this report. It is assumed that each entry in the dataset is unique, allowing for a strong individual-based analysis.
 
 # Visualisations
@@ -90,7 +90,7 @@ for encoded_value, category in enumerate(original_categories_resp):
     print(f"Encoded Value: {encoded_value} corresponds to original category '{category}'")
 ```
 
-### LASSO modelling
+### LASSO Modelling
 LASSO modelling plays a crucial role for feature selection especially after multiple columns are created post encoding. This ensures that only the most impactful features are retained. By applying a penalty that reduces less significant features to zero, the model streamlines the predictive modeling process, shifting the focus to the variables that are more impactful or relevant. This targeted approach not only enhances the efficiency of the overall analysis but also supports more informed, data-driven business strategies. <br>
 
 ![lasso](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/LASSO.png)
@@ -110,10 +110,10 @@ One of the key strengths of Random Forest is its robustness against overfitting,
 
 ![random forest](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/Random%20Forest.png)
 
-## Summary of findings
+## Summary of Findings
 All three models show that customers perform purchases few times a month as shown by the highest count in all 3 bar plots. Moreover, this supports the bar plot results in Figure 1 which shows the purchase frequency of ‘Few times a month’ having the highest count.  This further validates that the prediction outcomes of each model is reliable. Understanding how often customers make purchases such as their purchase frequencies helps in segmenting them into groups based on their buying behavior. This segmentation can be used to tailor marketing strategies to Amazon’s needs and preferences, enhancing the effectiveness of marketing efforts.
 
-### Evaluation of predictive models
+### Evaluation of Predictive Models
 The KNN model has the lowest MAE, suggesting it has the smallest average error per prediction, making it slightly better in terms of absolute error compared to the other two models. In terms of MSE, the KNN model scores the lowest MSE, indicating it is less prone to large errors compared to the others. This suggests that the KNN model not only makes smaller errors on average but also has fewer large errors in its predictions. Lastly, the KNN model shows the lowest RMSE, indicating that its predictions are, on average, closer to the actual values. The errors in the KNN predictions are smaller than those in the Gradient Boosting and Random Forest models. <br>
 
 ![models evaluation](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/predictive%20models%20evaluation.png)
@@ -126,7 +126,7 @@ Here, the variable purchase category ('PchCat') is the target variable on which 
 
 The user item matrix organizes the interactions between users and items in a structured format with rows representing users, columns representing the different combinations of purchase categories, and the cells representing the nature of the interactions (i.e whether a user has interacted with a purchase category combination). The matrix makes it easier to identify relationships between users and items. The index column of the encoded dataframe “df_recommender_encoded“ is used to represent the individual user IDs (rows). The categorical data in the variable ‘PchCat’ are converted into multiple dummy variables with each representing a unique combination of purchased product categories. The binary cell values represent interactions between each user ID and the different combinations of purchase categories.
 
-## NMF model
+## NMF Model
 The NMF model is a robust technique in collaborative filtering. It is instrumental in deciphering complex, latent patterns within user shopping behaviours, thereby facilitating the personalization of product recommendations. By decomposing the user-item interaction matrix into user and item latent matrices, the NMF model identifies and leverages latent factors to identify unexplored product categories that customers are likely to be interested in.
 
 ## Simulation
