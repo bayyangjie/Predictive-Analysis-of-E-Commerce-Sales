@@ -1,24 +1,24 @@
 ![aws logo](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/amazon.png)
 
 # Table of Contents
-1. Introduction
-2. About the dataset
-3. Visualisations
-4. Modelling and Evaluation
-    * Predictive Modelling
-        * Encoding
-        * LASSO Modelling
-        * Predictive Model #1 - KNN
-        * Predictive Model #2 - Decision Tree with Gradient Boosting
-        * Predictive Model #3 - Random Forest
-    * Summary of findings
-    * Evaluation of predictive models
-5. Recommender System
-    * User item matrix  
-    * NMF model
-    * Simulation
-6. Conclusion
-7. Improvements
+1. [Introduction](#introduction)
+2. [About the dataset](#about-the-dataset)
+3. [Visualisations](#visualisations)
+4. [Modelling and Evaluation](#modelling-and-evaluation)
+    * [Predictive Modelling](#predictive-modelling)
+        * [Encoding](#encoding)
+        * [LASSO Modelling](#lasso-modelling)
+        * [Predictive Model #1 - KNN](#predictive-model-1---knn)
+        * [Predictive Model #2 - Decision Tree with Gradient Boosting](#predictive-model-2---decision-tree-with-gradient-boosting)
+        * [Predictive Model #3 - Random Forest](#predictive-model-3---random-forest)
+    * [Summary of findings](#summary-of-findings)
+    * [Evaluation of predictive models](#evaluation-of-predictive-models)
+5. [Recommender System](#recommender-system)
+    * [User item matrix](user-item-matrix)
+    * [NMF model](nmf-model)
+    * [Simulation](#simulation)
+6. [Conclusion](#conclusion)
+7. [Improvements](#improvements)
 
 # Introduction
 This research looks into the fast-changing landscape of online shopping, focusing on Amazon to identify and analyze new consumer behaviors. The key goals are to enhance Amazon's marketing strategies and boost user satisfaction by using data analytics and machine learning techniques. The findings highlight crucial behavioral trends that significantly improve customer satisfaction and engagement, particularly through methods like K-Nearest Neighbors and Decision Tree with Gradient Boosting. These insights led to the development of a sophisticated recommendation system that effectively spots opportunities for cross-selling and up-selling. The methods and results discussed have important implications for integrating them into Amazon's operations, aiming to improve user experiences and strengthen the company's market position by better understanding and fulfilling customer needs.
