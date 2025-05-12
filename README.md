@@ -27,37 +27,37 @@ This research looks into the fast-changing landscape of online shopping, focusin
 This research uses a dataset from Kaggle that includes the interactions of 602 customers on Amazon, covering 23 different variables. These interactions show how often customers browse and buy, their satisfaction levels, and how they respond to recommendations. This information helps to understand customer engagement better. The dataset is detailed enough to analyze user behaviors closely, which supports the predictive insights aimed for in this report. It is assumed that each entry in the dataset is unique, allowing for a strong individual-based analysis.
 
 # Visualisations
-**Counts of each purchase frequency category** <br>
+## **Count of each Purchase Frequency Category** <br>
 
 The bar plot shows that the overall purchase frequency is on the low end. The total count of the two lowest purchase frequency levels 'Less than once a month' and 'Once a month' tally to 231 which forms the majority count proportion. This gives a clear understanding of how frequently customers shop on Amazon, enabling the business to make strategic decisions to boost sales on the platform. <br>
 
 ![Purchase frequency counts](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchase%20freq%20counts.png)
 
-**Counts of each purchase category** <br>
+## **Count of each Purchase Category** <br>
 
 The category 'Clothing and Fashion' is the most favored among the categories shown, with the highest number of items. This indicates that many transactions are conducted within this specific category. The categories 'Beauty and Personal Care' and 'Home and Kitchen' are also popular but have much lower counts than 'Clothing and Fashion'. This shows a moderate level of interest among customers in these categories. This insight is critical towards guiding strategic marketing efforts at Amazon as it suggests a focus on strengthening the leading purchase categories individually besides grouped purchase categories while exploring growth opportunities in the other categories. <br>
 
-![Counts of each purchase category](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/counts%20of%20purchase%20category.png)
+<img src="https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/counts%20of%20purchase%20category.png?raw=true" width="60%">
 
-**Purchase frequency vs Browsing frequency** <br>
+## **Purchase Frequency vs Browsing Frequency** <br>
 
 As browsing frequency increases, there is a noticeable shift toward more frequent purchases, particularly with higher proportions of weekly and multiple times a week purchases. Leveraging these insights, it is evident that enhancing user interaction through optimized website navigation, targeted promotions, and personalized content are ways that can significantly boost purchase frequencies. <br>
 
 ![Purchase freq vs Brows Freq](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchase%20vs%20browsing%20frequency.png)
 
-**Frequency of purchases from personalized recommendations vs Personalized Recommendation Frequencies** <br>
+## **Frequency of Purchases from Personalized Recommendations vs Personalized Recommendation Frequencies** <br>
 
 The bar plot above reveals interesting insights into the relationship between the frequency of purchases resulting from personalized recommendations and frequency of personalized recommendations. Notably, customers who never receive recommendations still exhibit the highest purchase proportions, suggesting that factors other than recommendations significantly influence buying decisions. Conversely, customers receiving the most frequent recommendations surprisingly show moderate proportion of purchases. This indicates that an overabundance of recommendations may not effectively convert into sales, potentially due to other reasons such as discounts or vouchers given out. <br>
 
 ![purchase freq vs rec freq](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchases%20vs%20recommendations.png)
 
-**Shopping satiscation level vs Personalized Recommendation Frequencies** <br>
+## **Shopping Satisfaction vs Personalized Recommendation Frequencies** <br>
 
 The above plot shows that personalized recommendation frequencies does influence shopping satisfaction levels. There is a visible trend that as personalized recommendation frequency increases, the proportion of satisfaction levels (i.e ‘Satisfied’ , ‘Very satisfied’) increases. And the lower the personalized recommendation frequency, the higher the proportions of dissatisfaction levels (‘Very dissatisfied’, ‘Dissatisfied’). The observation suggests that Amazon's strategic investment in personalized recommendations substantially enhances the customer shopping experience. Customers who frequently receive tailored recommendations feel more valued and are more likely to enjoy their shopping experience. This also underscores the necessity for Amazon to further refine its recommendation algorithms to increase the relevance and frequency of personalized content while providing customers with a more personalized shopping experience. <br>
 
 ![shop satisfaction vs rec freq](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/Shopping%20satisfaction%20vs%20Recommendations.png)
 
-**Purchase frequencies of each age group** <br>
+## **Proportions of Purchase Frequencies by Age Group** <br>
 
 Senior Citizens: Senior citizens exhibit a relatively high purchase frequency compared to other age groups, especially in the categories of "Multiple times a week" and "Once a week" This indicates a consistent engagement with the platform, suggesting that they rely on it regularly for their purchasing needs. Given their frequent interactions and trust in the platform, there is a significant opportunity for upselling and cross-selling products that cater to the unique needs of senior citizens.
 
@@ -132,7 +132,7 @@ The NMF model is a robust technique in collaborative filtering. It is instrument
 ## Simulation
 The recommender function (recommend_items) here takes a specific user (user_id) and retrieves their predicted interaction scores (from **user_predictions_df**) for all items. It then sorts these scores in descending order, recommending the top n grouped categories for the specified user. The simulation below shows an example for the top 5 purchase category recommendations for user IDs 1 to 4. <br>
 
-![simulation](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/Simulation.gif)
+<img src="https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/Simulation.gif?raw=true" width="100%">
 
 # Conclusion
 This study has provided deep insights into the shopping behaviours and preferences of Amazon customers, leveraging sophisticated predictive modelling and machine learning techniques. The effective application of models such as K-Nearest Neighbors, Decision Tree with Gradient Boosting, and Random Forest has illuminated key factors that influence customer purchase frequencies. This understanding is vital for Amazon to tailor its marketing strategies, enhancing user engagement and increasing sales efficiency.
