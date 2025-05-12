@@ -2,7 +2,7 @@
 
 # Table of Contents
 1. [Introduction](#introduction)
-2. [About the data](#about-the-data)
+2. [About the Data](#about-the-data)
 3. [Visualisations](#visualisations)
 4. [Modelling and Evaluation](#modelling-and-evaluation)
     * [Predictive Modelling](#predictive-modelling)
