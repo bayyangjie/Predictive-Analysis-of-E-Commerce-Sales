@@ -27,23 +27,23 @@ This research looks into the fast-changing landscape of online shopping, focusin
 This research uses a dataset from Kaggle that includes the interactions of 602 customers on Amazon, covering 23 different variables. These interactions show how often customers browse and buy, their satisfaction levels, and how they respond to recommendations. This information helps to understand customer engagement better. The dataset is detailed enough to analyze user behaviors closely, which supports the predictive insights aimed for in this report. It is assumed that each entry in the dataset is unique, allowing for a strong individual-based analysis.
 
 # Visualisations
-**Counts of each purchase frequency category**
+**Counts of each purchase frequency category** <br>
 
-<img src="purchase freq counts.png" width="35%"/>
+The bar plot shows that the overall purchase frequency is on the low end. The total count of the two lowest purchase frequency levels 'Less than once a month' and 'Once a month' tally to 231 which forms the majority count proportion. This gives a clear understanding of how frequently customers shop on Amazon, enabling the business to make strategic decisions to boost sales on the platform. <br>
 
-The bar plot above shows that the overall purchase frequency is on the low end. The total count of the two lowest purchase frequency levels 'Less than once a month' and 'Once a month' tally to 231 which forms the majority count proportion. This gives a clear understanding of how frequently customers shop on Amazon, enabling the business to make strategic decisions to boost sales on the platform.
+![Purchase frequency counts](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchase%20freq%20counts.png)
 
-**Counts of each purchase category**
+**Counts of each purchase category** <br>
 
-<img src="counts of purchase category.png" width="35%"/>
+The category 'Clothing and Fashion' is the most favored among the categories shown, with the highest number of items. This indicates that many transactions are conducted within this specific category. The categories 'Beauty and Personal Care' and 'Home and Kitchen' are also popular but have much lower counts than 'Clothing and Fashion'. This shows a moderate level of interest among customers in these categories. This insight is critical towards guiding strategic marketing efforts at Amazon as it suggests a focus on strengthening the leading purchase categories individually besides grouped purchase categories while exploring growth opportunities in the other categories. <br>
 
-The category 'Clothing and Fashion' is the most favored among the categories shown, with the highest number of items. This indicates that many transactions are conducted within this specific category. The categories 'Beauty and Personal Care' and 'Home and Kitchen' are also popular but have much lower counts than 'Clothing and Fashion'. This shows a moderate level of interest among customers in these categories. This insight is critical towards guiding strategic marketing efforts at Amazon as it suggests a focus on strengthening the leading purchase categories individually besides grouped purchase categories while exploring growth opportunities in the other categories.
+![Counts of each purchase category](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/counts%20of%20purchase%20category.png)
 
-**Purchase frequency vs Browsing frequency**
+**Purchase frequency vs Browsing frequency** <br>
 
-<img src="purchase vs browsing frequency.png" width="35%"/>
+As browsing frequency increases, there is a noticeable shift toward more frequent purchases, particularly with higher proportions of weekly and multiple times a week purchases. Leveraging these insights, it is evident that enhancing user interaction through optimized website navigation, targeted promotions, and personalized content are ways that can significantly boost purchase frequencies. <br>
 
-As browsing frequency increases, there is a noticeable shift toward more frequent purchases, particularly with higher proportions of weekly and multiple times a week purchases. Leveraging these insights, it is evident that enhancing user interaction through optimized website navigation, targeted promotions, and personalized content are ways that can significantly boost purchase frequencies.
+![Purchase freq vs Brows Freq](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchase%20vs%20browsing%20frequency.png)
 
 **Frequency of purchases from personalized recommendations vs Personalized Recommendation Frequencies**
 
