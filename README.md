@@ -45,21 +45,19 @@ As browsing frequency increases, there is a noticeable shift toward more frequen
 
 ![Purchase freq vs Brows Freq](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchase%20vs%20browsing%20frequency.png)
 
-**Frequency of purchases from personalized recommendations vs Personalized Recommendation Frequencies**
+**Frequency of purchases from personalized recommendations vs Personalized Recommendation Frequencies** <br>
 
-<img src="purchases vs recommendations.png" width="35%"/>
+The bar plot above reveals interesting insights into the relationship between the frequency of purchases resulting from personalized recommendations and frequency of personalized recommendations. Notably, customers who never receive recommendations still exhibit the highest purchase proportions, suggesting that factors other than recommendations significantly influence buying decisions. Conversely, customers receiving the most frequent recommendations surprisingly show moderate proportion of purchases. This indicates that an overabundance of recommendations may not effectively convert into sales, potentially due to other reasons such as discounts or vouchers given out. <br>
 
-The bar plot above reveals interesting insights into the relationship between the frequency of purchases resulting from personalized recommendations and frequency of personalized recommendations. Notably, customers who never receive recommendations still exhibit the highest purchase proportions, suggesting that factors other than recommendations significantly influence buying decisions. Conversely, customers receiving the most frequent recommendations surprisingly show moderate proportion of purchases. This indicates that an overabundance of recommendations may not effectively convert into sales, potentially due to other reasons such as discounts or vouchers given out.
+![purchase freq vs rec freq](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchases%20vs%20recommendations.png)
 
-**Shopping satiscation level vs Personalized Recommendation Frequencies**
+**Shopping satiscation level vs Personalized Recommendation Frequencies** <br>
 
-<img src="Shopping satisfaction vs Recommendations.png" width="35%"/>
+The above plot shows that personalized recommendation frequencies does influence shopping satisfaction levels. There is a visible trend that as personalized recommendation frequency increases, the proportion of satisfaction levels (i.e ‘Satisfied’ , ‘Very satisfied’) increases. And the lower the personalized recommendation frequency, the higher the proportions of dissatisfaction levels (‘Very dissatisfied’, ‘Dissatisfied’). The observation suggests that Amazon's strategic investment in personalized recommendations substantially enhances the customer shopping experience. Customers who frequently receive tailored recommendations feel more valued and are more likely to enjoy their shopping experience. This also underscores the necessity for Amazon to further refine its recommendation algorithms to increase the relevance and frequency of personalized content while providing customers with a more personalized shopping experience. <br>
 
-The above plot shows that personalized recommendation frequencies does influence shopping satisfaction levels. There is a visible trend that as personalized recommendation frequency increases, the proportion of satisfaction levels (i.e ‘Satisfied’ , ‘Very satisfied’) increases. And the lower the personalized recommendation frequency, the higher the proportions of dissatisfaction levels (‘Very dissatisfied’, ‘Dissatisfied’). The observation suggests that Amazon's strategic investment in personalized recommendations substantially enhances the customer shopping experience. Customers who frequently receive tailored recommendations feel more valued and are more likely to enjoy their shopping experience. This also underscores the necessity for Amazon to further refine its recommendation algorithms to increase the relevance and frequency of personalized content while providing customers with a more personalized shopping experience.
+![shop satisfaction vs rec freq](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/Shopping%20satisfaction%20vs%20Recommendations.png)
 
-**Purchase frequencies of each age group**
-
-<img src="purchase frequency age groups.png" width="35%"/>
+**Purchase frequencies of each age group** <br>
 
 Senior Citizens: Senior citizens exhibit a relatively high purchase frequency compared to other age groups, especially in the categories of "Multiple times a week" and "Once a week" This indicates a consistent engagement with the platform, suggesting that they rely on it regularly for their purchasing needs. Given their frequent interactions and trust in the platform, there is a significant opportunity for upselling and cross-selling products that cater to the unique needs of senior citizens.
 
@@ -67,7 +65,9 @@ Middle-Aged Adults: This group also shows strong purchase frequencies. Although 
 
 Young Adults: Young adults exhibit a balanced spread across various shopping frequencies, with a notable propensity for purchasing a few times a month and once a week. This indicates a pattern of steady yet cautious shopping habits.
 
-Students: Students predominantly shop less frequently compared to other age groups. The largest proportion of their purchases falls into the categories of "Few times a month" and "Once a month". This suggests that their shopping habits could be more need-based than habitual or leisure-driven.
+Students: Students predominantly shop less frequently compared to other age groups. The largest proportion of their purchases falls into the categories of "Few times a month" and "Once a month". This suggests that their shopping habits could be more need-based than habitual or leisure-driven. <br>
+
+![purchase frequency of age groups](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/purchase%20frequency%20age%20groups.png)
 
 # Modelling and Evaluation
 This segment of the report delves into the predictive modelling and recommender system approaches to forecast customer behaviors and enhance product recommendations. Employing advanced algorithms such as K-Nearest Neighbors, Decision Tree with Gradient Boosting, and Random Forest, this section evaluates the effectiveness of each model in predicting purchase frequencies and suggests optimal marketing strategies. Simultaneously, the recommender system section explores innovative techniques to personalize user experiences, aiming to improve customer satisfaction and engagement. Through detailed evaluation, the aim is to validate the accuracy and efficiency of these models, providing Amazon with strategic insights to refine and tailor their user interactions.
@@ -91,33 +91,32 @@ for encoded_value, category in enumerate(original_categories_resp):
 ```
 
 ### LASSO modelling
-LASSO modelling plays a crucial role for feature selection especially after multiple columns are created post encodin. This ensures that only the most impactful features are retained. By applying a penalty that reduces less significant features to zero, the model streamlines the predictive modeling process, shifting the focus to the variables that are more impactful or relevant. This targeted approach not only enhances the efficiency of the overall analysis but also supports more informed, data-driven business strategies.
+LASSO modelling plays a crucial role for feature selection especially after multiple columns are created post encoding. This ensures that only the most impactful features are retained. By applying a penalty that reduces less significant features to zero, the model streamlines the predictive modeling process, shifting the focus to the variables that are more impactful or relevant. This targeted approach not only enhances the efficiency of the overall analysis but also supports more informed, data-driven business strategies. <br>
 
-<img src="LASSO.png" width="45%"/>
+![lasso](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/LASSO.png)
 
-### Predictive Model #1 - KNN 
-KNN model is chosen as one of the methods of predictive modelling here for comparison for a few reasons. Firstly, as the dataset is encoded into numerical inputs, it makes the KNN model suitable. Secondly, this dataset is not very huge making KNN a suitable method. The reduction in features by the LASSO model also helps mitigate the issue of high dimensionality which would make KNN a suitable model since it does not handle high dimensionality datasets well.
+## Predictive Model #1 - KNN 
+KNN model is chosen as one of the methods of predictive modelling here for comparison for a few reasons. Firstly, as the dataset is encoded into numerical inputs, it makes the KNN model suitable. Secondly, this dataset is not very huge making KNN a suitable method. The reduction in features by the LASSO model also helps mitigate the issue of high dimensionality which would make KNN a suitable model since it does not handle high dimensionality datasets well. <br>
 
-<img src="KNN.png" width="35%"/>
+![knn](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/KNN.png)
 
-### Predictive Model #2 - Decision Tree with Gradient Boosting
-After encoding categorical variables (especially through methods like one-hot encoding), the feature space may become high-dimensional. Gradient Boosting effectively handles high-dimensional spaces by building shallow trees in succession to gradually improve the model’s accuracy, focusing on the most informative features at each step.
+## Predictive Model #2 - Decision Tree with Gradient Boosting
+After encoding categorical variables (especially through methods like one-hot encoding), the feature space may become high-dimensional. Gradient Boosting effectively handles high-dimensional spaces by building shallow trees in succession to gradually improve the model’s accuracy, focusing on the most informative features at each step. <br>
 
-<img src="DTGB.png" width="35%"/>
+![gradient boosting](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/DTGB.png)
 
-### Predictive Model #3 - Random Forest 
-One of the key strengths of Random Forest is its robustness against overfitting, especially compared to individual decision trees. This is due to its ensemble method of building many decision trees and averaging their predictions, which generally leads to improved accuracy and stability.
+## Predictive Model #3 - Random Forest 
+One of the key strengths of Random Forest is its robustness against overfitting, especially compared to individual decision trees. This is due to its ensemble method of building many decision trees and averaging their predictions, which generally leads to improved accuracy and stability. <br>
 
-<img src="Random Forest.png" width="35%"/>
+![random forest](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/Random%20Forest.png)
 
 ## Summary of findings
 All three models show that customers perform purchases few times a month as shown by the highest count in all 3 bar plots. Moreover, this supports the bar plot results in Figure 1 which shows the purchase frequency of ‘Few times a month’ having the highest count.  This further validates that the prediction outcomes of each model is reliable. Understanding how often customers make purchases such as their purchase frequencies helps in segmenting them into groups based on their buying behavior. This segmentation can be used to tailor marketing strategies to Amazon’s needs and preferences, enhancing the effectiveness of marketing efforts.
 
-## Evaluation of predictive models
-The KNN model has the lowest MAE, suggesting it has the smallest average error per prediction, making it slightly better in terms of absolute error compared to the other two models. In terms of MSE, the KNN model scores the lowest MSE, indicating it is less prone to large errors compared to the others. This suggests that the KNN model not only makes smaller errors on average but also has fewer large errors in its predictions. Lastly, the KNN model shows the lowest RMSE, indicating that its predictions are, on average, closer to the actual values. The errors in the KNN predictions are smaller than those in the Gradient Boosting and Random Forest models.
+### Evaluation of predictive models
+The KNN model has the lowest MAE, suggesting it has the smallest average error per prediction, making it slightly better in terms of absolute error compared to the other two models. In terms of MSE, the KNN model scores the lowest MSE, indicating it is less prone to large errors compared to the others. This suggests that the KNN model not only makes smaller errors on average but also has fewer large errors in its predictions. Lastly, the KNN model shows the lowest RMSE, indicating that its predictions are, on average, closer to the actual values. The errors in the KNN predictions are smaller than those in the Gradient Boosting and Random Forest models. <br>
 
-<img src="predictive models evaluation.png" width="50%">  <br> <br>
-
+![models evaluation](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/predictive%20models%20evaluation.png)
 
 # Recommender System
 The recommender system is designed to enhance the shopping experience by providing tailored product category recommendations based on historical purchase data. In this analysis, the collaborative filtering was employed, specifically the Non-Negative Matrix Factorization (NMF) method. It leverages on patterns found in past user-item interactions. This method is preferred over content-based filtering as the current objectives focus on user behaviour rather than item specifics, which is not the primary focus of this analysis.
@@ -131,9 +130,9 @@ The user item matrix organizes the interactions between users and items in a str
 The NMF model is a robust technique in collaborative filtering. It is instrumental in deciphering complex, latent patterns within user shopping behaviours, thereby facilitating the personalization of product recommendations. By decomposing the user-item interaction matrix into user and item latent matrices, the NMF model identifies and leverages latent factors to identify unexplored product categories that customers are likely to be interested in.
 
 ## Simulation
-The recommender function (recommend_items) here takes a specific user (user_id) and retrieves their predicted interaction scores (from **user_predictions_df**) for all items. It then sorts these scores in descending order, recommending the top n grouped categories for the specified user. The simulation below shows an example for the top 5 purchase category recommendations for user IDs 1 to 4.
+The recommender function (recommend_items) here takes a specific user (user_id) and retrieves their predicted interaction scores (from **user_predictions_df**) for all items. It then sorts these scores in descending order, recommending the top n grouped categories for the specified user. The simulation below shows an example for the top 5 purchase category recommendations for user IDs 1 to 4. <br>
 
-<img src="Simulation.gif" width="65%">
+![simulation](https://github.com/bayyangjie/Predictive-Analysis-of-E-Commerce-Sales/blob/main/Images/Simulation.gif)
 
 # Conclusion
 This study has provided deep insights into the shopping behaviours and preferences of Amazon customers, leveraging sophisticated predictive modelling and machine learning techniques. The effective application of models such as K-Nearest Neighbors, Decision Tree with Gradient Boosting, and Random Forest has illuminated key factors that influence customer purchase frequencies. This understanding is vital for Amazon to tailor its marketing strategies, enhancing user engagement and increasing sales efficiency.
